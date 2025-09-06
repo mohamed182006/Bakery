@@ -627,7 +627,7 @@ button:hover {
     #SAVORY .star-rat {
         padding-top: 10%;
         padding-bottom: 5%;
-        transform: translateX(-5%);
+        transform: translateX(5%);
     }
 
     #bage5 .pro-title {
