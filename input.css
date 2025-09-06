@@ -1,0 +1,1242 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+html.body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+
+}
+
+#body {
+
+    background-color: #fff6ea;
+
+    background-size: cover;
+}
+
+.web {
+    padding: 0 5rem;
+}
+
+.bage1 {
+    min-height: 100vh;
+
+
+}
+
+
+
+.navebare ul {
+
+    background-color: #faead5;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 35px;
+    border-radius: 100px;
+}
+
+
+
+ul li img {
+    width: 180px;
+    color: #4B2C20;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navebare ul li a {
+    display: inline-block;
+    padding: 0px 50px;
+    color: #4B2C20;
+    text-decoration: none;
+    transition: 0.5s ease;
+    font-family: "Roboto Slab", serif;
+}
+
+.navebare ul li a:hover {
+    transform: scale(1.4);
+}
+
+.items {
+    display: flex;
+
+    justify-content: space-between;
+
+
+}
+
+.items img {
+    width: 600px;
+    height: auto;
+    margin-top: 150px;
+    transform: rotate(-11deg) translateX(100px);
+
+}
+
+.items .content {
+    font-family: "TikTok Sans", sans-serif;
+    color: #5C3B1E;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 200px;
+
+
+}
+
+.content h1 {
+    font-family: "Playwrite AU QLD", cursive;
+    color: #5C3B1E;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+
+.content #p {
+    color: #5C3B1E;
+    font-size: 20px;
+    white-space: pre;
+}
+
+.content button {
+    background-color: #5C3B1E;
+
+    width: 30%;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    transition: 0.4s ease;
+}
+
+button span {
+    color: #faead5;
+    font-weight: bold;
+    font-size: large;
+
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.bage2 {
+    min-height: 100vh;
+    background-color: #fff6ea;
+    width: 100%;
+
+
+}
+
+
+.text {
+
+    transform: translateY(50px);
+    text-align: center;
+    font-size: x-large;
+
+
+}
+
+.text h1 {
+    color: #4B2C20;
+    font-family: "Roboto Slab", serif;
+    font-size: xx-large;
+    background-color: #f7e5ce;
+    display: inline-block;
+    border-radius: 10px;
+
+
+}
+
+.text p {
+    font-family: "Playwrite AU QLD", cursive;
+
+}
+
+.cards p {
+    color: #4B2C20;
+
+    font-family: "Roboto Slab", serif;
+    font-size: 15px;
+    white-space: nowrap;
+
+}
+
+.cards {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(130px);
+
+
+}
+
+.cards h3 {
+    color: #4B2C20;
+    font-family: "Playwrite AU QLD", cursive;
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.card img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+
+
+}
+
+.web h2 {
+
+    font-family: "Pacifico", cursive;
+    color: #5C3B1E;
+    font-size: 60px;
+
+
+}
+
+.web h3 {
+    font-family: "Roboto Slab", serif;
+
+}
+
+.bage4 h1 {
+    font-family: "Roboto Slab", serif;
+
+}
+
+
+
+.remove {
+    display: none;
+}
+
+
+
+
+
+
+/* Mobile Responsive */
+
+@media (max-width: 767px) {
+
+
+
+    .web {
+        padding: 0 2rem;
+    }
+
+    /* اخفاء الـ Navbar العادي */
+    .navebare {
+        display: none;
+    }
+
+    /* زرار الهامبرجر */
+    .mobile-menu {
+        display: flex;
+        justify-content: space-between;
+
+        list-style: none;
+
+    }
+
+    .mobile-menu img {
+        width: 50%;
+        margin: auto;
+
+
+    }
+
+    .box {
+        position: relative;
+        /* العنصر الأب لازم يكون relative */
+        margin-top: 20%;
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -5px;
+        /* المسافة من فوق */
+        right: -20px;
+        /* المسافة من اليمين */
+        width: 20px;
+        /* حجم العداد */
+        height: 20px;
+        font-size: 12px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+
+    #cartbox {
+
+        width: 100%;
+        position: relative;
+        left: 10px;
+        transform: translateY(-15%);
+    }
+
+    #cartbox .pro-card {
+        width: 80%;
+        transform: translateX(8%);
+
+        margin-bottom: 10px;
+    }
+
+    #cartbox #buyAllBtn {
+        width: 60%;
+        margin: auto;
+    }
+
+    .mobile-menu button {
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #4B2C20;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 40%;
+        left: -100%;
+        width: 50%;
+        height: 20%;
+        background: #faead5;
+        padding: 20px;
+        transition: 0.4s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        margin-top: 150px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #4B2C20;
+        background-color: #faead5;
+        border-radius: 17px;
+        padding: 5px;
+        z-index: 100;
+
+
+    }
+
+    #close-btn {
+        font-size: 22px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .content {
+        transform: translatey(-25%)
+    }
+
+    .content h1 {
+        font-size: 29px !important;
+        font-weight: 800;
+
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 14px !important;
+        line-height: 1.4;
+        white-space: normal !important;
+        max-width: 100%;
+    }
+
+    .content button {
+        font-size: 18px !important;
+        width: 110%;
+        padding: auto;
+    }
+
+    #bread {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        transform: translateX(10%) translateY(50%);
+        display: block;
+
+    }
+
+    .items,
+    .content,
+    .cart-count,
+    .box,
+    #bread {
+        transition: transform 0.4s ease;
+        /* حركة سلسة */
+    }
+
+    #logo {
+        transition: transform 0.4s ease;
+        margin: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+        /* يخلي الكروت تحت بعض */
+        gap: 30px;
+        /* مسافة بين كل كارت */
+        transform: translateY(-7%);
+        /* تقليل المسافة من فوق */
+    }
+
+    .card img {
+        width: 200px;
+        /* تصغير الصور */
+        height: 200px;
+    }
+
+    .text {
+        transform: translateY(-5.5rem);
+        font-size: large;
+        /* تصغير الخط */
+        padding: 0 10px;
+        /* شوية مساحة يمين وشمال */
+    }
+
+    .text h1 {
+        font-size: x-large;
+        /* تصغير عنوان */
+        padding: 5px 10px;
+    }
+
+    .cards p {
+        font-size: 13px;
+        /* تصغير وصف الكروت */
+        white-space: normal;
+        /* يخلي الكلام ينزل على سطرين لو طويل */
+        text-align: center;
+    }
+
+    .cards h3 {
+        font-size: 16px;
+        text-align: center;
+
+    }
+
+
+
+    #bage3 {
+        height: auto;
+        /* يخلي الارتفاع تلقائي بدل h-screen */
+        padding: 20px 10px;
+    }
+
+    #bage3 img {
+        width: 70%;
+        height: 70%;
+        margin: 0 auto 20px;
+        display: block;
+        border-radius: 50%;
+        transform: translateY(-80%);
+    }
+
+    #bage3 h2 {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+
+    /* الكروت */
+    #bage3 .web>div {
+        position: static !important;
+        /* يلغي الـ absolute */
+        margin: 10px auto;
+        width: 100% !important;
+        /* يخليها تاخد عرض مناسب */
+        max-width: 350px;
+    }
+
+    #bage3 h3 {
+        font-size: 16px;
+    }
+
+    #bage3 p {
+        font-size: 14px;
+    }
+
+
+
+    #bage4 {
+        height: auto;
+        /* نخلي ارتفاعه تلقائي */
+    }
+
+
+    #bage4 .flex {
+        flex-direction: column;
+        /* النص فوق والصورة تحت */
+        height: auto;
+    }
+
+    #bage4 .flex>div {
+        width: 100% !important;
+        /* النص ياخد العرض كله */
+        padding: 20px;
+    }
+
+    #bage4 #chef {
+        width: 100% !important;
+        /* الصورة تاخد العرض كله */
+        height: auto;
+        object-fit: cover;
+        filter: blur(2px);
+        /* نفس البلور بس بسيط */
+    }
+
+    #bage4 .w-110 {
+        width: 70%;
+        transform: translateX(23%);
+    }
+
+    .history {
+        transform: translateY(-45%) translateX(-10%);
+
+    }
+
+    #bage4 h1 {
+        font-size: 22px;
+
+    }
+
+    #bage4 p {
+        font-size: 14px;
+
+        width: 100% !important;
+        /* نخلي النصوص تاخد عرض الموبايل */
+    }
+
+
+
+
+
+    #bage5 {
+        height: auto;
+        /* بدل h-screen نخلي ارتفاعه تلقائي */
+        padding: 30px 10px;
+    }
+
+    #bage5 h1 {
+        width: 90% !important;
+        /* بدل 500px */
+        height: auto;
+        font-size: 18px;
+        /* بدل 3xl */
+        padding: 10px;
+        line-height: 1.4;
+    }
+
+    #bage5 .relative {
+        width: 100% !important;
+        /* بدل 1400px */
+        height: auto !important;
+        /* بدل 750px */
+        border-width: 1px;
+        padding: 10px;
+    }
+
+    #SAVORY {
+        gap: 15px !important;
+        /* بدل gap-20 */
+        translate: none !important;
+        /* نلغي translate-y */
+        margin-top: 30px;
+    }
+
+    /* الكروت */
+    #bage5 .pro-card {
+        width: 100% !important;
+        /* بدل 350px */
+        max-width: 320px;
+        height: 500px !important;
+        /* يخلي الكرت يتمدد حسب المحتوى */
+        margin: 30px;
+        padding: 10px;
+    }
+
+    #bage5 .pro-img {
+        width: 100% !important;
+        /* تخلي الصورة تاخد عرض الكرت */
+        height: 180px !important;
+    }
+
+    #card-half {
+        transform: translateY(49px);
+
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        /* shadow-2xl أبيض / افتراضي */
+
+    }
+
+    .cart {
+        transform: translateX(15%);
+    }
+
+    #SAVORY .star-rat {
+        padding-top: 10%;
+        padding-bottom: 5%;
+        transform: translateX(-5%);
+    }
+
+    #bage5 .pro-title {
+        font-size: 18px !important;
+    }
+
+    #bage5 .pro-des {
+        font-size: 14px !important;
+    }
+
+    #bage5 .pro-price {
+        font-size: 22px !important;
+        margin: auto
+    }
+
+    #bage5 .shop {
+        font-size: 20px !important;
+
+    }
+
+    /* زرار Show More */
+    #bage5 a {
+        position: static !important;
+        /* نلغي absolute */
+        display: block;
+        margin: 20px auto;
+        width: 180px !important;
+        height: 40px !important;
+    }
+
+    #bage5 a h1 {
+        font-size: 20px !important;
+        transform: translateY(-34%);
+        margin: auto;
+    }
+
+
+
+
+    #bage6 {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 10%;
+        height: auto;
+        /* ارتفاع تلقائي بدل ثابت */
+        padding: 20px 10px;
+    }
+
+    .swiper {
+        width: 100% !important;
+        /* نخلي السويبر ياخد عرض الموبايل كله */
+    }
+
+    .swiper-slide>div {
+        width: 95% !important;
+        /* الكارت ياخد عرض 95% بدل 800px */
+        height: auto !important;
+        /* ارتفاع تلقائي حسب المحتوى */
+        padding: 15px !important;
+        /* شوية Padding أصغر */
+    }
+
+    .swiper-slide img {
+        width: 60px !important;
+        /* تصغير الصورة */
+        height: auto !important;
+    }
+
+    .swiper-slide h1 {
+        font-size: 18px !important;
+        /* تصغير العنوان */
+    }
+
+    .swiper-slide p {
+        font-size: 14px !important;
+        /* تصغير النص */
+        line-height: 1.4;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ipad Responsive */
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .web {
+        padding: 0 2rem;
+    }
+
+    /* اخفاء الـ Navbar العادي */
+    .navebare {
+        display: none;
+    }
+
+    /* زرار الهامبرجر */
+    .mobile-menu {
+        display: flex;
+        justify-content: space-between;
+
+        list-style: none;
+
+    }
+
+
+    .box {
+        position: relative;
+        /* العنصر الأب لازم يكون relative */
+        margin-top: 17%;
+        margin-right: 7%;
+
+        font-size: x-large;
+
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -5px;
+        /* المسافة من فوق */
+        right: -20px;
+        /* المسافة من اليمين */
+        width: 20px;
+        /* حجم العداد */
+        height: 20px;
+        font-size: 12px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    #cartbox {
+
+        width: 75%;
+        position: relative;
+        left: 10px;
+
+
+        transform: translateY(-20%);
+    }
+
+    #cartbox .pro-card {
+
+        transform: translateX(5%);
+
+    }
+
+    .mobile-menu img {
+        width: 40%;
+        margin: auto;
+
+
+    }
+
+
+    .mobile-menu button {
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #4B2C20;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 45%;
+        left: -100%;
+        width: 50%;
+        height: 20%;
+        background: #faead5;
+        padding: 20px;
+        transition: 0.4s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        margin-top: 156px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #4B2C20;
+        background-color: #faead5;
+        border-radius: 17px;
+        padding: 5px;
+        z-index: 100;
+
+
+    }
+
+    #close-btn {
+        font-size: 22px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .content {
+        transform: translatey(-25%)
+    }
+
+    .content h1 {
+        font-size: 29px !important;
+        font-weight: 800;
+
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 14px !important;
+        line-height: 1.4;
+        white-space: normal !important;
+        max-width: 100%;
+    }
+
+    .content button {
+        font-size: 18px !important;
+        width: 110%;
+        padding: auto;
+    }
+
+    #bread {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        transform: translateX(10%) translateY(10%);
+        display: block;
+
+    }
+
+    .items,
+    .content,
+    .cart-count,
+    .box,
+    #bread {
+        transition: transform 0.4s ease;
+        /* حركة سلسة */
+    }
+
+    #logo {
+        transition: transform 0.4s ease;
+        margin: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+        /* يخلي الكروت تحت بعض */
+        gap: 30px;
+        /* مسافة بين كل كارت */
+        transform: translateY(-7%);
+        /* تقليل المسافة من فوق */
+    }
+
+    .card img {
+        width: 300px;
+        /* تصغير الصور */
+        height: 300px;
+    }
+
+    .text {
+        transform: translateY(-6.5rem);
+        font-size: x-large;
+        /* تصغير الخط */
+        padding: 0 10px;
+        /* شوية مساحة يمين وشمال */
+    }
+
+    .text h1 {
+        font-size: xx-large;
+        /* تصغير عنوان */
+        padding: 5px 10px;
+    }
+
+    .cards p {
+        font-size: 13px;
+        /* تصغير وصف الكروت */
+        white-space: normal;
+        /* يخلي الكلام ينزل على سطرين لو طويل */
+        text-align: center;
+    }
+
+    .cards h3 {
+        font-size: 16px;
+        text-align: center;
+
+    }
+
+
+
+    #bage3 {
+        height: auto;
+        /* يخلي الارتفاع تلقائي بدل h-screen */
+        padding: 30px 10px;
+    }
+
+    #bage3 img {
+        width: 70%;
+        height: 70%;
+        margin: 0 auto 20px;
+        display: block;
+        border-radius: 50%;
+        transform: translateY(-80%);
+    }
+
+    #bage3 h2 {
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
+
+    /* الكروت */
+    #bage3 .web>div {
+        position: static !important;
+        /* يلغي الـ absolute */
+        margin: 10px auto;
+        width: 100% !important;
+        /* يخليها تاخد عرض مناسب */
+        max-width: 350px;
+    }
+
+    #bage3 h3 {
+        font-size: 16px;
+    }
+
+    #bage3 p {
+        font-size: 14px;
+    }
+
+
+
+    #bage4 {
+        height: auto;
+        /* نخلي ارتفاعه تلقائي */
+    }
+
+
+    #bage4 .flex {
+        flex-direction: column;
+        /* النص فوق والصورة تحت */
+        height: auto;
+    }
+
+    #bage4 .flex>div {
+        width: 100% !important;
+        /* النص ياخد العرض كله */
+        padding: 30px;
+    }
+
+    #bage4 #chef {
+        width: 100% !important;
+        /* الصورة تاخد العرض كله */
+        height: 700px;
+        object-fit: cover;
+        filter: blur(2px);
+        /* نفس البلور بس بسيط */
+    }
+
+    #bage4 .w-110 {
+        width: 55%;
+        transform: translateX(-10%);
+    }
+
+    .history {
+        transform: translateY(-57%) translateX(-4%);
+
+    }
+
+    #bage4 h1 {
+        font-size: 22px;
+
+    }
+
+    #bage4 p {
+        font-size: 14px;
+
+        width: 100% !important;
+        /* نخلي النصوص تاخد عرض الموبايل */
+    }
+
+
+
+
+
+    #bage5 {
+        height: auto;
+        /* بدل h-screen نخلي ارتفاعه تلقائي */
+        padding: 30px 10px;
+    }
+
+    #bage5 h1 {
+        width: 90% !important;
+        /* بدل 500px */
+        height: auto;
+        font-size: 18px;
+        /* بدل 3xl */
+        padding: 10px;
+        line-height: 1.4;
+    }
+
+    #bage5 .relative {
+        width: 100% !important;
+        /* بدل 1400px */
+        height: auto !important;
+        /* بدل 750px */
+        border-width: 1px;
+        padding: 10px;
+    }
+
+    #SAVORY {
+        gap: 15px !important;
+        /* بدل gap-20 */
+        translate: none !important;
+        /* نلغي translate-y */
+        margin-top: 53px;
+    }
+
+    /* الكروت */
+    #bage5 .pro-card {
+        width: 100% !important;
+        /* بدل 350px */
+        max-width: 320px;
+        height: 500px !important;
+        /* يخلي الكرت يتمدد حسب المحتوى */
+        margin: 30px;
+        padding: 10px;
+    }
+
+    #bage5 .pro-img {
+        width: 100% !important;
+        /* تخلي الصورة تاخد عرض الكرت */
+        height: 180px !important;
+    }
+
+    #card-half {
+        transform: translateY(48px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        /* shadow-2xl أبيض / افتراضي */
+
+    }
+
+
+    .cart {
+        transform: translateX(15%);
+    }
+
+    #SAVORY .star-rat {
+        padding-top: 10%;
+        padding-bottom: 5%;
+        transform: translateX(-5%);
+    }
+
+    #bage5 .pro-title {
+        font-size: 18px !important;
+    }
+
+    #bage5 .pro-des {
+        font-size: 14px !important;
+    }
+
+    #bage5 .pro-price {
+        font-size: 22px !important;
+        margin: auto
+    }
+
+    #bage5 .shop {
+        font-size: 20px !important;
+
+    }
+
+    /* زرار Show More */
+    #bage5 a {
+        position: static !important;
+        /* نلغي absolute */
+        display: block;
+        margin: 20px auto;
+        width: 180px !important;
+        height: 40px !important;
+    }
+
+    #bage5 a h1 {
+        font-size: 20px !important;
+        transform: translateY(-34%);
+        margin: auto;
+    }
+
+
+
+
+    #bage6 {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 10%;
+        height: auto;
+        /* ارتفاع تلقائي بدل ثابت */
+        padding: 20px 10px;
+    }
+
+    .swiper {
+        width: 100% !important;
+        /* نخلي السويبر ياخد عرض الموبايل كله */
+    }
+
+    .swiper-slide>div {
+        width: 95% !important;
+        /* الكارت ياخد عرض 95% بدل 800px */
+        height: auto !important;
+        /* ارتفاع تلقائي حسب المحتوى */
+        padding: 15px !important;
+        /* شوية Padding أصغر */
+
+    }
+
+    .swiper-slide img {
+        width: 60px !important;
+        /* تصغير الصورة */
+        height: auto !important;
+    }
+
+    .swiper-slide h1 {
+        font-size: 18px !important;
+        /* تصغير العنوان */
+    }
+
+    .swiper-slide p {
+        font-size: 14px !important;
+        /* تصغير النص */
+        line-height: 1.4;
+    }
+}
+
+
+
+
+
+
+
+/* Ipad pro  */
+
+@media(width:1024px) {
+
+
+    #cartbox .pro-card {
+
+        transform: translateX(19%);
+
+    }
+
+    #bage4 .w-110 {
+        width: 55%;
+        transform: translateX(-15%) translateY(10%);
+    }
+
+}
+
+
+
+/* Mobile + Ipad */
+@media (max-width: 1024px) {
+    .navebare {
+        display: none !important;
+        /* نخفي navbar العادي */
+    }
+
+    .mobile-menu,
+    .sidebar {
+        display: flex !important;
+        /* نعرض نسخة الموبايل */
+    }
+
+}
+
+/* Labtop*/
+@media (min-width: 1025px) {
+
+    .mobile-menu,
+    .sidebar {
+        display: none !important;
+        /* نخفي نسخة الموبايل */
+    }
+
+    .navebare {
+        display: flex !important;
+        /* navbar اللاب يظهر */
+    }
+
+}

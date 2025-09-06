@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmation</title>
+  <link rel="icon" href="photo/logo.png" type="image/png" sizes="32x32">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 m-0 p-0">
+
+  <div class="flex justify-center">
+    <div class="w-full max-w-[600px]">
+
+      <!-- Main Content -->
+      <div class="bg-white px-8 py-8">
+        <div class="text-center">
+          <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" class="mx-auto w-32 h-30"
+            alt="checked" />
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-800 mt-4">Thank You For Your Order!</h2>
+          <p class="text-gray-500 mt-2" id="customerMessage">Your order has been received.</p>
+        </div>
+
+        <!-- Order Details -->
+        <div class="mt-6">
+          <table class="w-full border-collapse" id="orderTable">
+            <!-- سيتم إضافة الصفوف ديناميكيًا -->
+          </table>
+        </div>
+
+        <!-- Delivery Info -->
+        <div class="flex flex-wrap mt-6">
+          <div class="w-full sm:w-1/2 px-2">
+            <p class="font-bold">Delivery Address</p>
+            <p id="deliveryAddress"></p>
+          </div>
+          <div class="w-full sm:w-1/2 px-2">
+            <p class="font-bold">Estimated Delivery Date</p>
+            <p id="deliveryDate"></p>
+          </div>
+
+
+        </div>
+
+
+        <div class="flex justify-center items-center translate-y-10 text-center">
+          <a href="Bakery.html"
+            class="bg-amber-950 text-2xl w-screen text-white font-medium rounded-2xl px-5 py-2  hover:bg-amber-800 transition-colors duration-300">
+            Back To Home
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="bg-white px-8 py-8 text-center">
+        <img src="photo/ChatGPT Image Aug 5, 2025, 08_12_15 PM.png" class="mx-auto translate-y-3.5 w-[120px]"
+          alt="logo" />
+        <div class="bg-white px-8 text-center text-gray-700 text-sm">
+          <p>Tahrir Square, Cairo, Egypt</p>
+          <p class="text-gray-800 font-bold mt-2"> ©<span id="year"></span> Bailey’s Bakery. All rights reserved.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // ضبط السنة في الفوتر
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // جلب بيانات الطلب من localStorage
+    const orderData = JSON.parse(localStorage.getItem("orderData"));
+
+    if (orderData) {
+      const table = document.getElementById("orderTable");
+      let totalPrice = 0;
+      let totalDelivery = 0;
+
+      // رقم الطلب
+      const orderNumberRow = document.createElement("tr");
+      orderNumberRow.className = "bg-gray-200 font-bold";
+      orderNumberRow.innerHTML = `
+        <td class="p-2">Order Confirmation #</td>
+        <td class="p-2">${Math.floor(Math.random() * 9000000) + 1000000}</td>
+      `;
+      table.appendChild(orderNumberRow);
+
+      // كل المنتجات
+      orderData.products.forEach(product => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td class="p-2">${product.title} x${product.qty}</td>
+          <td class="p-2">$${product.total.toFixed(2)}</td>
+        `;
+        table.appendChild(row);
+
+        totalPrice += product.price * product.qty;
+        totalDelivery += product.delivery;
+      });
+
+      // Shipping + Handling
+      const shippingRow = document.createElement("tr");
+      shippingRow.innerHTML = `
+        <td class="p-2">Shipping + Handling</td>
+        <td class="p-2">$${totalDelivery.toFixed(2)}</td>
+      `;
+      table.appendChild(shippingRow);
+
+      // TOTAL
+      const totalRow = document.createElement("tr");
+      totalRow.className = "border-t-4 border-b-4 border-gray-200 font-bold";
+      totalRow.innerHTML = `
+        <td class="p-2">TOTAL</td>
+        <td class="p-2">$${(totalPrice + totalDelivery).toFixed(2)}</td>
+      `;
+      table.appendChild(totalRow);
+
+      // بيانات التوصيل
+      document.getElementById("deliveryAddress").innerHTML = `${orderData.address}`;
+      document.getElementById("deliveryDate").textContent = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toDateString(); // متوقع بعد 5 أيام
+    }
+  </script>
+
+</body>
+
+</html>

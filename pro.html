@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="icon" href="photo/logo.png" type="image/png" sizes="32x32">
+
+    <link rel="stylesheet" href="Bakery.css">
+    <script src="Bakery.js"></script>
+</head>
+
+<style>
+    /* ===== Mobile (لجميع الموبايلات لحد 767px) ===== */
+    @media (max-width: 767px) {
+
+        #product {
+            margin: 0 2rem;
+            position: relative;
+
+            /* للحفاظ على absolute فوق الصورة */
+        }
+
+        #img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 1rem;
+        }
+
+        #star-rat-price {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            top: 85%;
+            align-items: center;
+            /* نسبة من أسفل الصورة بدل القيمة الثابتة */
+        }
+
+
+        #star-rat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        #price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            transform: translateX(-35%);
+
+        }
+
+        #order {
+            width: 80%;
+            height: 40px;
+            transform: translateY(-75%);
+            margin: 1.5rem auto 0;
+        }
+
+        #order button {
+            font-size: 16px;
+        }
+    }
+
+    /* ===== Tablet (من 768px لحد 1199px) ===== */
+    @media (min-width: 768px) and (max-width: 1199px) {
+
+        #product {
+            transform: translateY(30px);
+        }
+
+        #img {
+            width: 100%;
+            max-width: 500px;
+            /* أقصى حاجة 500px */
+            height: auto;
+        }
+
+
+        #star-rat-price {
+            transform: translateY(200px) translateX(-35px);
+        }
+
+        #order {
+            width: 60%;
+            height: 45px;
+        }
+
+        #order button {
+            font-size: 18px;
+        }
+    }
+</style>
+
+<body>
+
+
+
+    <div id="product">
+
+        <img id="img" class="w-[600px] h-[400px] m-auto rounded-3xl" src="img/bread-1761197_1920.jpg"
+            alt="French Baguette">
+
+
+        <div class=" relative text-center mt-5">
+            <h3 id="title" class="pb-3.5 pl-2 pt-3 text-5xl text-amber-950 font-medium">
+                French Baguette
+            </h3>
+            <h5 id="des" class="text-amber-900 text-2xl">
+                Classic crusty French bread with soft interior
+            </h5>
+        </div>
+
+        <div id="star-rat-price" class=" absolute left-[43%] bottom-[84px]  ">
+
+            <div id="star-rat" class="flex  items-center gap-2.5 ">
+                <img id="star" class="w-50" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="Rating">
+
+                <h3 id="rat" class="text-amber-950 font-medium">4.5</h3>
+            </div>
+
+            <h4 id="price" class="text-5xl font-extrabold translate-x-13 -translate-y-5  ">2.5$</h4>
+
+        </div>
+
+        <div class="flex translate-y-40">
+
+            <div id="order"
+                class="bg-amber-950 shadow-2xl shadow-amber-950 rounded-2xl w-100 h-10 m-auto transition-all duration-700 hover:tracking-widest">
+
+                <button onclick="orderNow()"
+                    class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer">
+                    Order Now
+                </button>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+
+        function orderNow() {
+            localStorage.setItem("orderMode", "single"); // <-- نحدد إن ده طلب فردي
+            location.href = "p3.html";
+        }
+
+
+
+        let data;
+
+        window.addEventListener('DOMContentLoaded', () => {
+
+            data = JSON.parse(localStorage.getItem('selected'));
+
+            if (data) {
+                document.getElementById('img').src = data.img;
+                document.getElementById('title').textContent = data.title;
+                document.getElementById('des').textContent = data.des;
+                document.getElementById('star').src = data.star;
+                document.getElementById('rat').textContent = data.rat;
+                document.getElementById('price').textContent = data.price + '$';
+
+
+            }
+        })
+            ;
+    </script>
+
+</body>
+
+</html>

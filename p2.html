@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="icon" href="photo/logo.png" type="image/png" sizes="32x32">
+
+  <link rel="stylesheet" href="Bakery.css">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <section>
+    <div class=" flex flex-row gap-32 items-center justify-center mb-[100px] translate-y-10 ">
+      <div id="btnsweet"
+        class="bg-amber-950 rounded-4xl shadow-md shadow-amber-950 w-[300px] h-10 transition-transform duration-800 hover:scale-90">
+        <button
+          class=" font-semibold text-[23px] text-amber-50 p-0.5 w-full cursor-pointer  transition-transform duration-600 ">SWEET</button>
+
+      </div>
+
+      <div
+        class="bg-orange-100 rounded-4xl shadow-md shadow-amber-100  w-[300px] h-10 transition-transform duration-800 hover:scale-90">
+        <button id="btnsavory"
+          class=" font-semibold text-[23px] text-amber-950 p-0.5 w-full cursor-pointer  transition-transform duration-600 ">SAVORY</button>
+
+      </div>
+    </div>
+
+    <div id="SAVORY" class="flex flex-wrap gap-6 justify-center">
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/bread-1761197_1920.jpg"
+          alt="French Baguette">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">French Baguette</h3>
+        <h5 class="pro-des text-amber-900">Classic crusty French bread with soft interior</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="Rating">
+          <h3 class="pro-rat text-amber-950 font-medium">4.5</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><i class="fa-solid fa-cart-plus fa-2x  "></i></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/bread-9160026_1920.jpg"
+          alt="Sourdough Bread">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Sourdough Bread</h3>
+        <h5 class="pro-des text-amber-900">Tangy, crusty sourdough loaf with chewy crumb</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="Rating">
+          <h3 class="pro-rat text-amber-950 font-medium">4.7</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop ">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[218px] m-auto rounded-3xl" src="img/bread-5702703_1920.jpg"
+          alt="Whole Wheat Bread">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Whole Wheat Bread</h3>
+        <h5 class="pro-des text-amber-900">Healthy whole wheat loaf with nutty flavor</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="Rating">
+          <h3 class="pro-rat text-amber-950 font-medium">4.3</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/pexels-pealdesign-30668340.jpg"
+          alt="Brown Bread">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Brown Bread</h3>
+        <h5 class="pro-des text-amber-900">Rich and hearty brown bread with whole grains</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="Rating">
+          <h3 class="pro-rat text-amber-950 font-medium">4.2</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] m-auto rounded-3xl" src="img/bread-5671124_1920.jpg" alt="Toast Bread">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Toast Bread</h3>
+        <h5 class="pro-des text-amber-900">Soft and fluffy white bread perfect for toasting</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="Rating">
+          <h3 class="pro-rat text-amber-950 font-medium">4.1</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] m-auto rounded-3xl" src="img/loaf-3471667_1920.jpg" alt="Barley Bread">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Barley Bread</h3>
+        <h5 class="pro-des text-amber-900">Nutritious barley bread with a dense texture</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="Rating">
+          <h3 class="pro-rat text-amber-950 font-medium">4.0</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] m-auto rounded-3xl" src="img/baguettes-6122662_1920.jpg" alt="Fine Bread">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Fine Bread</h3>
+        <h5 class="pro-des text-amber-900">Soft and delicate bread perfect for sandwiches</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="Rating">
+          <h3 class="pro-rat text-amber-950 font-medium">4.4</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5 ">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/pexels-elkady-3892469.jpg"
+          alt="Butter Croissant">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Butter Croissant</h3>
+        <h5 class="pro-des text-amber-900">Flaky and golden croissant with buttery layers</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="">
+          <h3 class="pro-rat text-amber-950 font-medium">4.7</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+
+
+    <div id="SWEET" class="flex flex-wrap gap-6 justify-center">
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] m-auto rounded-3xl" src="img/pexels-polina-tankilevitch-4828276.jpg" alt="">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Chocolate croissant</h3>
+        <h5 class="pro-des text-amber-900">A buttery, flaaky pastry filled with rich chocolate</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="">
+          <h3 class="pro-rat text-amber-950 font-medium">4</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/pexels-sveta-k-75705601-8846932.jpg"
+          alt="Cinnamon Roll">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Cinnamon Roll</h3>
+        <h5 class="pro-des text-amber-900">Soft roll with cinnamon swirls and creamy icing</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="">
+          <h3 class="pro-rat text-amber-950 font-medium">4.8</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/swirl-3700359_1920.jpg"
+          alt="Apple Strudel">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Apple Strudel</h3>
+        <h5 class="pro-des text-amber-900">Traditional apple strudel with cinnamon and raisins</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="">
+          <h3 class="pro-rat text-amber-950 font-medium">4.6</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/cupcakes-1850628_1920.jpg"
+          alt="Vanilla Cupcake">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Vanilla Cupcake</h3>
+        <h5 class="pro-des text-amber-900">Light and fluffy cupcake topped with vanilla buttercream</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="">
+          <h3 class="pro-rat text-amber-950 font-medium">4.2</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/dessert-4227690_1920.jpg" alt="Lemon Tart">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Lemon Tart</h3>
+        <h5 class="pro-des text-amber-900">Tangy lemon tart with a buttery crust</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="">
+          <h3 class="pro-rat text-amber-950 font-medium">4.4</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] h-[200px] m-auto rounded-3xl" src="img/pexels-change-c-c-974768353-30700726.jpg"
+          alt="Chocolate Eclair">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Chocolate Eclair</h3>
+        <h5 class="pro-des text-amber-900">Delicious eclair with rich chocolate glaze</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="">
+          <h3 class="pro-rat text-amber-950 font-medium">4.6</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="pro-card w-[350px] h-[480px] bg-amber-50 shadow-2xl rounded-3xl px-5 py-5">
+        <img class="pro-img w-[300px] m-auto rounded-3xl" src="img/pexels-merwak-raw-399619273-16480754.jpg"
+          alt="Cinnamon Twist">
+        <h3 class="pro-title pb-3.5 pl-2 pt-3 text-3xl text-amber-950 font-medium">Cinnamon Twist</h3>
+        <h5 class="pro-des text-amber-900">Twisted cinnamon pastry with a sweet glaze</h5>
+        <div class="flex items-center gap-2.5 translate-x-19 -translate-y-7">
+          <img class="pro-star w-35" src="img/ChatGPT Image Aug 12, 2025, 09_45_39 AM.png" alt="">
+          <h3 class="pro-rat text-amber-950 font-medium">4.3</h3>
+        </div>
+        <div class="-translate-y-10">
+          <div class="flex justify-between">
+            <h4 class="pro-price text-3xl font-bold pl-2 pb-3">2.5$</h4>
+            <button onclick="addtocart(this)" class="cart"><a><i class="fa-solid fa-cart-plus fa-2x  "></i></a></button>
+          </div>
+          <div class="bg-amber-950 rounded-2xl w-full h-10 m-auto transition-all duration-600 hover:tracking-widest">
+            <button class="text-amber-50 text-[20px] text-center w-full p-1 font-semibold cursor-pointer shop">Shop Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+
+  <script>
+
+
+    let savory = document.getElementById('SAVORY');
+    let sweet = document.getElementById('SWEET');
+    let btnsavory = document.getElementById('btnsavory');
+    let btnsweet = document.getElementById('btnsweet');
+
+    let sweetonly = false;
+    let savoryonly = false;
+
+    btnsavory.onclick = function () {
+
+      if (savoryonly == false) {
+
+        sweet.classList.add("remove");
+        savory.classList.remove("remove");
+        savoryonly = true;
+      } else {
+        savory.classList.remove("remove");
+        sweet.classList.remove("remove");
+        savoryonly = false;
+      }
+    }
+
+
+    btnsweet.onclick = function () {
+      if (sweetonly == false) {
+
+        savory.classList.add("remove");
+        sweet.classList.remove("remove");
+
+        sweetonly = true;
+
+      } else {
+        savory.classList.remove("remove");
+        sweet.classList.remove("remove");
+        sweetonly = false;
+      }
+
+
+    }
+
+  </script>
+
+
+
+
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const cartCount = document.getElementById("cart-count");
+
+      // تحديث العداد عند التحميل
+      updateCartCount();
+      updateCartButtons();
+      showbox();
+
+      window.addtocart = function (button) {
+        let product = button.closest(".pro-card");
+        if (!product) return;
+
+        // نجيب كل التفاصيل من الكارد مباشرة
+        let selected = {
+          img: product.querySelector(".pro-img")?.src || "",
+          title: product.querySelector(".pro-title")?.innerText || "",
+          des: product.querySelector(".pro-des")?.innerText || "",
+          price: product.querySelector(".pro-price")?.innerText.replace('$', '') || "",
+          star: product.querySelector(".pro-star")?.src || "",
+          rat: product.querySelector(".pro-rat")?.innerText || ""
+        };
+
+        let cartbox = JSON.parse(localStorage.getItem("cartbox")) || [];
+
+        // التحقق من وجود المنتج بالفعل
+        if (cartbox.some(item => item.title === selected.title)) {
+          alert("This product is already in the cart✅");
+          return;
+        }
+
+        cartbox.push(selected);
+        localStorage.setItem("cartbox", JSON.stringify(cartbox));
+
+        // تغيير لون أيقونة السلة
+        const cartIcon = button.querySelector('i');
+        if (cartIcon) cartIcon.style.color = "#78350f";
+
+        showbox();
+        updateCartButtons();
+        updateCartCount();
+
+        alert("The product has been added successfully✅");
+      }
+
+
+      // عرض المنتجات في السلة
+      function showbox() {
+        const cartbox = JSON.parse(localStorage.getItem("cartbox")) || [];
+        const cartContainer = document.getElementById("cartbox");
+        if (!cartContainer) return;
+
+        cartContainer.innerHTML = "";
+        cartbox.forEach((item, index) => {
+          cartContainer.innerHTML += `
+        <div class="w-[470px] bg-amber-50 rounded-3xl translate-x-3.5 translate-y-5 p-3 mb-3">
+          <img class="w-[120px] h-[100px] rounded-3xl m-auto" src="${item.img}" alt="${item.title}">
+          <div class="p-2 text-center">
+            <h3 class="text-2xl text-amber-950 font-medium">${item.title}</h3>
+           
+            <h4 class="text-3xl font-medium">${item.price}$</h4>
+            <button onclick="removeFromCart(${index})" class="text-red-600 font-bold mt-2">حذف</button>
+          </div>
+        </div>
+
+
+      `;
+        });
+
+
+        // زر شراء الكل يظهر مرة واحدة بعد كل المنتجات
+        cartContainer.innerHTML += `
+        <div class="w-full flex justify-center mt-6">
+            <button id="buyAllBtn" class=" hidden bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700">
+                شراء الكل
+            </button>
+        </div>
+    `;
+
+        // إضافة حدث للزر
+        const buyAllBtn = document.getElementById("buyAllBtn");
+        if (buyAllBtn) {
+
+          if (cartbox.length > 0) {
+            buyAllBtn.classList.remove("hidden"); // لو فيه منتجات، نعرض الزرار
+          } else {
+            buyAllBtn.classList.add("hidden"); // لو مفيش منتجات، نخفي الزرار
+          }
+
+          buyAllBtn.addEventListener("click", () => {
+            localStorage.setItem("orderMode", "all");
+            location.href = "p3.html"; // غيّر للصفحة اللي عايزها
+          });
+        }
+      }
+
+
+
+      // تحديث أزرار السلة ولون الأيقونات
+      function updateCartButtons() {
+        const cartbox = JSON.parse(localStorage.getItem("cartbox")) || [];
+        const cartBtns = document.querySelectorAll(".cart");
+
+        cartBtns.forEach(button => {
+          const product = button.closest(".pro-card");
+          if (!product) return;
+
+          const proTitle = product.querySelector(".pro-title")?.innerText || "";
+          const cartIcon = button.querySelector("i");
+
+          if (cartbox.some(item => item.title === proTitle)) {
+            if (cartIcon) cartIcon.style.color = "#78350f";
+          } else {
+            if (cartIcon) cartIcon.style.color = "";
+          }
+        });
+      }
+
+      // تحديث العداد
+      function updateCartCount() {
+        const cartbox = JSON.parse(localStorage.getItem("cartbox")) || [];
+        const count = cartbox.length;
+
+        if (cartCount) {
+          if (count > 0) {
+            cartCount.innerText = count;
+            cartCount.classList.remove("hidden");
+          } else {
+            cartCount.classList.add("hidden");
+          }
+        }
+      }
+
+      // إزالة منتج من السلة
+      window.removeFromCart = function (index) {
+        let cartbox = JSON.parse(localStorage.getItem("cartbox")) || [];
+        cartbox.splice(index, 1);
+        localStorage.setItem("cartbox", JSON.stringify(cartbox));
+
+        showbox();
+        updateCartButtons();
+        updateCartCount();
+      }
+
+
+    });
+
+  </script>
+
+  <script src="pro.js"></script>
+
+
+
+</body>
+
+</html>

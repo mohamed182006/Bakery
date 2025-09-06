@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="icon" href="photo/logo.png" type="image/png" sizes="32x32">
+
+    <link rel="stylesheet" href="Bakery.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<style>
+    .bg-white.scroll-0.flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        /* في النص أفقي */
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* الجدول */
+    table {
+        width: 100%;
+        max-width: 800px;
+        /* أقصى عرض */
+        margin: 20px auto;
+
+    }
+
+    th,
+    td {
+        padding: 12px;
+
+        text-align: center;
+    }
+
+    /* الفورم */
+    .xx {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    /* hr */
+    hr {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+
+    /* Media Queries */
+    @media (max-width: 640px) {
+        table {
+            font-size: 12px;
+        }
+
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+        table {
+            font-size: 14px;
+        }
+
+    }
+
+    @media (min-width: 1025px) {
+        table {
+            font-size: 16px;
+        }
+
+    }
+</style>
+<div class="bg-white scroll-0 flex justify-center items-center min-h-screen flex-col">
+
+    <body>
+
+        <table class="w-full translate-y-9  border-collapse">
+            <thead class="border-b">
+                <tr>
+                    <th class="px-6 py-3 text-left  ">ITEM</th>
+                    <th class="px-6 py-3 text-left ">QUANTITY</th>
+                    <th class="px-3 py-3 text-left ">PRICE</th>
+                    <th class="px-3 py-3 text-left ">DELIVERY</th>
+                    <th class="px-3 py-3 text-left ">TOTAL</th>
+
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+
+                <!-- هنا هيتم إضافة الصفوف ديناميكيًا -->
+            </tbody>
+
+        </table>
+
+
+        <hr class=" relative  mt-[10%] m-auto w-280">
+
+
+
+
+
+        <div class="bg-white xx  p-8 rounded-2xl shadow-xl w-full max-w-2xl">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Checkout Form</h2>
+
+            <form id="checkoutForm" class="space-y-5">
+                <!-- Personal Info -->
+                <div>
+                    <label class="block font-medium">Full Name</label>
+                    <input type="text" id="fullName" class="w-full mt-1 p-2 border rounded-lg">
+                    <p class="text-red-500 text-sm hidden" id="fullNameError">Please enter your full name</p>
+                </div>
+
+                <div>
+                    <label class="block font-medium">Last Name</label>
+                    <input type="text" id="lastName" class="w-full mt-1 p-2 border rounded-lg">
+                    <p class="text-red-500 text-sm hidden" id="lastNameError">Please enter your last name</p>
+                </div>
+
+                <div>
+                    <label class="block font-medium">Email</label>
+                    <input type="email" id="email" class="w-full mt-1 p-2 border rounded-lg">
+                    <p class="text-red-500 text-sm hidden" id="emailError">Please enter a valid email</p>
+                </div>
+
+                <div>
+                    <label class="block font-medium">Address</label>
+                    <input type="text" id="address" class="w-full mt-1 p-2 border rounded-lg">
+                    <p class="text-red-500 text-sm hidden" id="addressError">Please enter your address</p>
+                </div>
+
+                <!-- Payment Options -->
+                <div>
+                    <label class="block font-medium mb-2">Payment Method</label>
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="payment" value="card" class="paymentRadio">
+                            <i class="fa-brands fa-cc-visa text-2xl text-blue-600"></i>
+                            <span>Credit Card</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="payment" value="paypal" class="paymentRadio">
+                            <i class="fa-brands fa-paypal text-2xl text-blue-500"></i>
+                            <span>PayPal</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="payment" value="cod" class="paymentRadio">
+                            <i class="fa-solid fa-money-bill-wave text-2xl text-green-600"></i>
+                            <span>Cash on Delivery</span>
+                        </label>
+                    </div>
+                    <p class="text-red-500 text-sm hidden" id="paymentError">Please select a payment method</p>
+                </div>
+
+                <!-- Payment Forms -->
+                <div id="cardForm" class="hidden space-y-3">
+                    <input type="text" id="cardNumber" placeholder="Card Number" class="w-full p-2 border rounded-lg">
+                    <p class="text-red-500 text-sm hidden" id="cardNumberError">Please enter card number</p>
+
+                    <input type="text" id="expiry" placeholder="Expiry Date (MM/YY)"
+                        class="w-full p-2 border rounded-lg">
+                    <p class="text-red-500 text-sm hidden" id="expiryError">Please enter expiry date</p>
+
+                    <input type="text" id="cvv" placeholder="CVV" class="w-full p-2 border rounded-lg">
+                    <p class="text-red-500 text-sm hidden" id="cvvError">Please enter CVV</p>
+                </div>
+
+                <div id="paypalForm" class="hidden space-y-3">
+                    <input type="email" id="paypalEmail" placeholder="PayPal Email"
+                        class="w-full p-2 border rounded-lg">
+                    <p class="text-red-500 text-sm hidden" id="paypalEmailError">Please enter your PayPal email</p>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                    Submit
+                </button>
+                <p id="successMessage" class="hidden text-green-600 font-semibold text-center mt-3">Payment Successful!
+                </p>
+            </form>
+        </div>
+</div>
+
+<script>
+    const radios = document.querySelectorAll(".paymentRadio");
+    const cardForm = document.getElementById("cardForm");
+    const paypalForm = document.getElementById("paypalForm");
+
+    radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            cardForm.classList.add("hidden");
+            paypalForm.classList.add("hidden");
+
+            if (radio.value === "card") cardForm.classList.remove("hidden");
+            if (radio.value === "paypal") paypalForm.classList.remove("hidden");
+        });
+    });
+
+    document.getElementById("checkoutForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        // reset errors
+        document.querySelectorAll("p.text-red-500").forEach(el => el.classList.add("hidden"));
+
+        // validate basic info
+        if (!document.getElementById("fullName").value.trim()) {
+            document.getElementById("fullNameError").classList.remove("hidden"); valid = false;
+        }
+        if (!document.getElementById("lastName").value.trim()) {
+            document.getElementById("lastNameError").classList.remove("hidden"); valid = false;
+        }
+        const email = document.getElementById("email").value.trim();
+        if (!email || !email.includes("@")) {
+            document.getElementById("emailError").classList.remove("hidden"); valid = false;
+        }
+        if (!document.getElementById("address").value.trim()) {
+            document.getElementById("addressError").classList.remove("hidden"); valid = false;
+        }
+
+        // validate payment
+        const payment = document.querySelector("input[name='payment']:checked");
+        if (!payment) {
+            document.getElementById("paymentError").classList.remove("hidden"); valid = false;
+        } else {
+            if (payment.value === "card") {
+                if (!document.getElementById("cardNumber").value.trim()) {
+                    document.getElementById("cardNumberError").classList.remove("hidden"); valid = false;
+                }
+                if (!document.getElementById("expiry").value.trim()) {
+                    document.getElementById("expiryError").classList.remove("hidden"); valid = false;
+                }
+                if (!document.getElementById("cvv").value.trim()) {
+                    document.getElementById("cvvError").classList.remove("hidden"); valid = false;
+                }
+            }
+            if (payment.value === "paypal") {
+                const paypalEmail = document.getElementById("paypalEmail").value.trim();
+                if (!paypalEmail || !paypalEmail.includes("@")) {
+                    document.getElementById("paypalEmailError").classList.remove("hidden"); valid = false;
+                }
+            }
+        }
+
+
+        if (valid) {
+            // جمع بيانات المنتجات
+            const tbody = document.getElementById("tbody");
+            const productsData = [];
+
+            tbody.querySelectorAll("tr").forEach(row => {
+                const title = row.children[0].textContent;
+                const qty = parseInt(row.querySelector("input").value) || 1;
+                const price = parseFloat(row.querySelector(".price-cell").textContent.replace("$", "")) || 0;
+                const delivery = parseFloat(row.querySelector(".delivery-cell").textContent.replace("$", "")) || 0;
+                const total = parseFloat(row.querySelector(".total-cell").textContent.replace("$", "")) || 0;
+
+                productsData.push({ title, qty, price, delivery, total });
+            });
+
+            // خزّن بيانات المستخدم والمنتجات
+            const orderData = {
+                fullName: document.getElementById("fullName").value,
+                lastName: document.getElementById("lastName").value,
+                email: document.getElementById("email").value,
+                address: document.getElementById("address").value,
+                paymentMethod: payment.value,
+                products: productsData
+            };
+
+            localStorage.setItem("orderData", JSON.stringify(orderData));
+
+            // اظهار رسالة نجاح الدفع
+            document.getElementById("successMessage").classList.remove("hidden");
+
+            // تحويل المستخدم لصفحة التأكيد بعد ثانيتين
+            setTimeout(() => {
+                window.location.href = "confirmation.html";
+            }, 2000);
+        }
+    });
+</script>
+
+
+
+
+<script>
+    window.onload = function () {
+        let orderMode = localStorage.getItem("orderMode"); // "single" أو "all"
+        let products = [];
+
+        if (orderMode === "single") {
+            const selected = JSON.parse(localStorage.getItem("selected"));
+            if (selected) products.push(selected);
+        } else if (orderMode === "all") {
+            products = JSON.parse(localStorage.getItem("cartbox")) || [];
+        }
+
+        const tbody = document.getElementById("tbody");
+        tbody.innerHTML = "";
+
+        products.forEach((item, index) => {
+            const price = parseFloat(item.price) || 0;
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+            <td class="px-4 py-2">${item.title}</td>
+            <td class="px-9 py-2">
+                <input type="number" min="1" value="1" class="bg-white w-[50px] text-center border">
+            </td>
+            <td class="px-4 py-2 price-cell">${price.toFixed(2)}$</td>
+            <td class="px-4 py-2 delivery-cell"></td>
+            <td class="px-4 py-2 total-cell">${price.toFixed(2)}$</td>
+            <td class="px-4 py-2">
+                <button class="text-red-600 delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+        `;
+
+            tbody.appendChild(row);
+
+            const qtyInput = row.querySelector("input");
+            const totalCell = row.querySelector(".total-cell");
+            const deliveryCell = row.querySelector(".delivery-cell");
+
+
+            const qty = parseInt(qtyInput.value) || 1;
+
+            // حساب التوصيل والإجمالي مباشرة عند التحميل
+            const delivery = price * 0.1 * qty; // 10% توصيل
+            const total = price * qty + delivery;
+
+
+            deliveryCell.textContent = delivery.toFixed(2) + "$";
+            totalCell.textContent = total.toFixed(2) + "$";
+
+
+
+            qtyInput.addEventListener("input", () => {
+                const qty = parseInt(qtyInput.value) || 1;
+                const delivery = price * 0.1 * qty; // 10% توصيل
+                const total = price * qty + delivery;
+                deliveryCell.textContent = delivery.toFixed(2) + "$";
+                totalCell.textContent = total.toFixed(2) + "$";
+            });
+
+            row.querySelector(".delete-btn").addEventListener("click", () => {
+                products.splice(index, 1);
+                if (orderMode === "all") {
+                    localStorage.setItem("cartbox", JSON.stringify(products));
+                } else if (orderMode === "single") {
+                    localStorage.removeItem("selected");
+                }
+                row.remove();
+            });
+        });
+    };
+</script>
+</body>
+
+</html>
