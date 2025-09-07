@@ -459,7 +459,6 @@
 
         // التحقق من وجود المنتج بالفعل
         if (cartbox.some(item => item.title === selected.title)) {
-          alert("This product is already in the cart✅");
           return;
         }
 
@@ -474,7 +473,6 @@
         updateCartButtons();
         updateCartCount();
 
-        alert("The product has been added successfully✅");
       }
 
 

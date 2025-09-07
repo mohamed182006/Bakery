@@ -44,7 +44,6 @@ function addtocart(button) {
 
     if (exists) {
 
-        alert("This product is already in the cart ✅");
 
         return; // توقف إذا المنتج موجود
 
@@ -64,16 +63,13 @@ function addtocart(button) {
     let carticon = button.querySelector('i');
     carticon.style.color = "#78350f";
 
-    // // 9- تعطيل الزر بعد الضغط لمنع الضغط مرة ثانية
-    // button.disabled = true;
 
     // 10- حدث السلة على الصفحة فورًا
     showbox();
 
     updateCartCount(); // لتحديث العداد فور إضافة المنتج
 
-    // 11- رسالة تأكيد للمستخدم
-    alert("The product has been added successfully✅");
+    
 
     updateCartButtons();
 
