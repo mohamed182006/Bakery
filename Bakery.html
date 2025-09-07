@@ -36,7 +36,7 @@
 
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
+
 
 
 </head>
@@ -90,7 +90,7 @@
         </div>
 
         <!-- Sidebar -->
-        <div id="sidebar" class="sidebar hidden">
+        <div id="sidebar" class="sidebar ">
           <button id="close-btn">✕</button>
           <ul>
             <li><a href="#bage1">Home</a></li>
@@ -680,9 +680,16 @@
 
 
 
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.add("active"); // يظهر المينيو
+      menuBtn.style.display = "none"; // يخفي الهامبرجر
+      closeBtn.style.display = "block"; // يظهر علامة X
+    });
+
     closeBtn.addEventListener("click", () => {
-      sidebar.classList.add("hidden");
-      sidebar.classList.remove("show");
+      sidebar.classList.remove("active"); // يخفي المينيو
+      closeBtn.style.display = "none"; // يخفي علامة X
+      menuBtn.style.display = "block"; // يظهر الهامبرجر
     });
   </script>
 

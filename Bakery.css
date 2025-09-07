@@ -1331,7 +1331,7 @@ button:hover {
   }
   .sidebar {
     position: fixed;
-    top: 40%;
+    top: 42%;
     left: -100%;
     width: 50%;
     height: 20%;
@@ -1362,6 +1362,7 @@ button:hover {
   }
   #close-btn {
     font-size: 22px;
+    margin-top: -10%;
     background: none;
     border: none;
     cursor: pointer;
@@ -1645,7 +1646,7 @@ button:hover {
   }
   .sidebar {
     position: fixed;
-    top: 45%;
+    top: 43%;
     left: -100%;
     width: 50%;
     height: 20%;
@@ -1676,6 +1677,7 @@ button:hover {
   }
   #close-btn {
     font-size: 22px;
+    margin-top: -2%;
     background: none;
     border: none;
     cursor: pointer;
