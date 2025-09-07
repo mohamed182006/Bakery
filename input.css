@@ -13,7 +13,8 @@ html.body {
     padding: 0;
     width: 100%;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
+    /* يمنع أي scroll */
 
 
 }
@@ -253,9 +254,11 @@ button:hover {
 @media (max-width: 767px) {
 
 
-
     .web {
         padding: 0 2rem;
+        overflow: hidden;
+        /* يمنع أي scroll */
+
     }
 
     /* اخفاء الـ Navbar العادي */
@@ -753,6 +756,9 @@ button:hover {
 @media (min-width: 768px) and (max-width: 1024px) {
     .web {
         padding: 0 2rem;
+        overflow: hidden;
+        /* يمنع أي scroll */
+
     }
 
     /* اخفاء الـ Navbar العادي */

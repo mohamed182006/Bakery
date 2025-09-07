@@ -46,10 +46,10 @@
 
 </style>
 
-<body id="body">
+<body id="body" class="min-h-screen relative overflow-x-hidden">
 
 
-  <section id="bage1" class="bage1">
+  <section id="bage1" class="bage1 min-h-screen w-full">
 
     <div class="web">
 
@@ -146,7 +146,7 @@
 
 
 
-  <section id="bage2" class="bage2">
+  <section id="bage2" class="bage2 min-h-screen w-full">
 
     <div class="web">
       <div class="serves">
@@ -184,7 +184,7 @@
 
 
 
-  <section id="bage3" class=" relative h-screen text-amber-50 bg-[#f3e9d2]">
+  <section id="bage3" class=" relative w-full min-h-screen text-amber-50 bg-[#f3e9d2]">
 
     <div class="web">
       <hr>
@@ -247,7 +247,7 @@
   </section>
 
 
-  <section id="bage4" class="h-screen ">
+  <section id="bage4" class="min-h-screen w-full ">
 
 
     <div class="flex flex-row w-screen relative h-screen">
@@ -629,10 +629,10 @@
   </button>
 
   <script>
-    // إظهار السهم بعد النزول 300px
+    // إظهار السهم بعد النزول 400px
     window.onscroll = function () {
       const btn = document.getElementById('scrollTop');
-      if (document.documentElement.scrollTop > 200) {
+      if (document.documentElement.scrollTop > 400) {
         btn.classList.remove('hidden');
       } else {
         btn.classList.add('hidden');
