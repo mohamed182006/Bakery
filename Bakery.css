@@ -295,6 +295,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-2\.5 {
+    margin-top: calc(var(--spacing) * 2.5);
+  }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
@@ -544,6 +547,10 @@
   }
   .-translate-y-7 {
     --tw-translate-y: calc(var(--spacing) * -7);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-8 {
+    --tw-translate-y: calc(var(--spacing) * -8);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-10 {
@@ -1503,7 +1510,7 @@ button:hover {
   #bage5 .pro-card {
     width: 100% !important;
     max-width: 320px;
-    height: 500px !important;
+    height: 450px !important;
     margin: 30px;
     padding: 10px;
   }
@@ -1515,13 +1522,24 @@ button:hover {
     transform: translateY(49px);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
-  .cart {
-    transform: translateX(15%);
-  }
   #SAVORY .star-rat {
-    padding-top: 10%;
-    padding-bottom: 5%;
-    transform: translateX(-6.5%);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+  .price-cart {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+    box-sizing: border-box;
+  }
+  .cart {
+    text-align: right;
   }
   #bage5 .pro-title {
     font-size: 18px !important;
@@ -1531,7 +1549,7 @@ button:hover {
   }
   #bage5 .pro-price {
     font-size: 22px !important;
-    margin: auto;
+    text-align: left;
   }
   #bage5 .shop {
     font-size: 20px !important;
@@ -1806,7 +1824,7 @@ button:hover {
   #bage5 .pro-card {
     width: 100% !important;
     max-width: 320px;
-    height: 500px !important;
+    height: 450px !important;
     margin: 30px;
     padding: 10px;
   }
@@ -1818,13 +1836,24 @@ button:hover {
     transform: translateY(48px);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
-  .cart {
-    transform: translateX(15%);
-  }
   #SAVORY .star-rat {
-    padding-top: 10%;
-    padding-bottom: 5%;
-    transform: translateX(-5%);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+  .price-cart {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+    box-sizing: border-box;
+  }
+  .cart {
+    text-align: right;
   }
   #bage5 .pro-title {
     font-size: 18px !important;
@@ -1834,7 +1863,7 @@ button:hover {
   }
   #bage5 .pro-price {
     font-size: 22px !important;
-    margin: auto;
+    text-align: left;
   }
   #bage5 .shop {
     font-size: 20px !important;

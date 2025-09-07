@@ -249,6 +249,7 @@ button:hover {
 
 
 
+
 /* Mobile Responsive */
 
 @media (max-width: 767px) {
@@ -600,7 +601,7 @@ button:hover {
         width: 100% !important;
         /* بدل 350px */
         max-width: 320px;
-        height: 500px !important;
+        height: 450px !important;
         /* يخلي الكرت يتمدد حسب المحتوى */
         margin: 30px;
         padding: 10px;
@@ -620,15 +621,39 @@ button:hover {
 
     }
 
-    .cart {
-        transform: translateX(15%);
-    }
+
+
+
 
     #SAVORY .star-rat {
-        padding-top: 10%;
-        padding-bottom: 5%;
-        transform: translateX(-6.5%);
+        display: flex;
+        justify-content: center;
+        /* يخليها في النص */
+        gap: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+
     }
+
+    .price-cart {
+        display: flex !important;
+        justify-content: space-between !important;
+        /* السعر شمال - العربية يمين */
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        /* نتحكم في المسافة من الحافة */
+        box-sizing: border-box;
+ 
+    }
+
+    .cart {
+        text-align: right;
+
+    }
+
+
 
     #bage5 .pro-title {
         font-size: 18px !important;
@@ -640,7 +665,8 @@ button:hover {
 
     #bage5 .pro-price {
         font-size: 22px !important;
-        margin: auto
+        text-align: left;
+
     }
 
     #bage5 .shop {
@@ -708,8 +734,6 @@ button:hover {
     }
 
 }
-
-
 
 
 
@@ -1030,7 +1054,7 @@ button:hover {
         font-size: 14px;
 
         width: 100% !important;
-        /* نخلي النصوص تاخد عرض الموبايل */
+        /* نخلي النصوص تاخد عرضل الشاشة*/
     }
 
 
@@ -1075,7 +1099,7 @@ button:hover {
         width: 100% !important;
         /* بدل 350px */
         max-width: 320px;
-        height: 500px !important;
+        height: 450px !important;
         /* يخلي الكرت يتمدد حسب المحتوى */
         margin: 30px;
         padding: 10px;
@@ -1095,14 +1119,33 @@ button:hover {
     }
 
 
-    .cart {
-        transform: translateX(15%);
+    #SAVORY .star-rat {
+        display: flex;
+        justify-content: center;
+        /* يخليها في النص */
+        gap: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
     }
 
-    #SAVORY .star-rat {
-        padding-top: 10%;
-        padding-bottom: 5%;
-        transform: translateX(-5%);
+    .price-cart {
+        display: flex !important;
+        justify-content: space-between !important;
+        /* السعر شمال - العربية يمين */
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        /* نتحكم في المسافة من الحافة */
+        box-sizing: border-box;
+        /* padding يتحسب جوه العرض */
+    }
+
+    .cart {
+
+
+        text-align: right;
+
     }
 
     #bage5 .pro-title {
@@ -1115,7 +1158,8 @@ button:hover {
 
     #bage5 .pro-price {
         font-size: 22px !important;
-        margin: auto
+
+        text-align: left;
     }
 
     #bage5 .shop {
