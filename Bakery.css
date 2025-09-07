@@ -1331,7 +1331,7 @@ button:hover {
   }
   .sidebar {
     position: fixed;
-    top: 42%;
+    top: 30%;
     left: -100%;
     width: 50%;
     height: 20%;
@@ -1646,7 +1646,7 @@ button:hover {
   }
   .sidebar {
     position: fixed;
-    top: 43%;
+    top: 38%;
     left: -100%;
     width: 50%;
     height: 20%;
