@@ -204,7 +204,8 @@ function updateCartCount() {
             c.innerText = count;        // حط العدد داخل العداد
             c.classList.remove("hidden"); // خلي العداد ظاهر
         } else {
-            c.classList.add("hidden");  // لو مفيش منتجات أخفي العداد
+            c.innerText = count;   
+            // لو مفيش منتجات أخفي العداد
         }
     });
 }
