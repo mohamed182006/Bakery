@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 
 
 
@@ -261,6 +256,14 @@ button:hover {
 
     }
 
+    .items .content {
+   
+        width: 280px;
+        margin-top:150px ;
+    }
+
+
+
     /* اخفاء الـ Navbar العادي */
     .navebare {
         display: none;
@@ -361,32 +364,35 @@ button:hover {
 
     .sidebar ul li a {
         text-decoration: none;
-        font-size: 18px;
+        font-size: 16px;
         color: #4B2C20;
         background-color: #faead5;
-        border-radius: 17px;
-        padding: 5px;
+        border-radius: 15px;
+        padding: 3px 16px;
         z-index: 100;
+     
 
 
     }
 
     #close-btn {
-        font-size: 22px;
-        margin-top: -10%;
+        font-size: 20px;
+        margin-top: -14%;
         background: none;
         border: none;
         cursor: pointer;
     }
+    
 
     .content {
-        transform: translatey(-25%)
+        transform: translatey(-20%);
+
+     
     }
 
     .content h1 {
         font-size: 29px !important;
         font-weight: 800;
-
         max-width: 100%;
     }
 
@@ -401,14 +407,15 @@ button:hover {
         font-size: 18px !important;
         width: 110%;
         padding: auto;
+      
     }
 
     #bread {
-        width: 100%;
-        max-width: 100%;
+        /* width: 100%;
+        max-width: 340px;
         height: auto;
-        transform: translateX(10%) translateY(50%);
-        display: block;
+        transform: translateX(-35%) translateY(150%); */
+        display: none;
 
     }
 
@@ -621,8 +628,6 @@ button:hover {
         /* shadow-2xl أبيض / افتراضي */
 
     }
-
-
 
 
 
