@@ -76,7 +76,7 @@ function showbox() {
         <div class=" flex flex-col items-center gap-2">
         
 
-        <button onclick="goToProduct(${index})" class=" rounded-2xl w-40 mt-4 p-2  text-amber-50  bg-amber-950 ">show product</button>
+        <button onclick="goToProduct(${index})" class=" sp rounded-2xl w-40 mt-4 p-2  text-amber-50  bg-amber-950  ">show product</button>
 
         <button onclick="removeFromCart(${index})" class="text-red-600 font-bold mt-2 text-2xl">
            <i class="fa-solid fa-trash-can"></i>

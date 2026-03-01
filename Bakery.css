@@ -1455,6 +1455,9 @@ button:hover {
     left: 10px;
     transform: translateY(-15%);
   }
+  #cartbox .sp {
+    transform: none !important;
+  }
   #cartbox .pro-card {
     width: 80%;
     transform: translateX(8%);
@@ -1464,6 +1467,7 @@ button:hover {
     width: 60%;
     margin: auto;
   }
+
   .mobile-menu button {
     font-size: 28px;
     background: none;
@@ -1687,6 +1691,7 @@ button:hover {
   }
   .cart {
     text-align: right;
+    transform: none !important;
   }
   #bage5 .pro-title {
     font-size: 18px !important;
