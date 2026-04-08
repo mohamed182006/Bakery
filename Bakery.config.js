@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        
+          
         'playwrite-au-qld': ['"Playwrite AU QLD"', 'cursive'],
 
       }
