@@ -27,8 +27,12 @@ html.body {
 
 .bage1 {
     min-height: 100vh;
+}
 
-
+#bage3 {
+  margin: 0px auto;
+  padding: 120px;
+  max-width: 1600px;
 }
 
 
